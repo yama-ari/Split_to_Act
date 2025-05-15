@@ -58,3 +58,6 @@ end
 
 gem "tailwindcss-rails"
 gem "tailwindcss-ruby", "3.4.17"
+gem "slim-rails"
+gem "devise"
+gem "devise-i18n"
