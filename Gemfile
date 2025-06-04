@@ -65,5 +65,5 @@ gem "dotenv-rails"
 
 gem "ruby-openai", "~> 5.0"
 
-gem "tailwindcss-ruby", "4.1.6"
+gem "tailwindcss-ruby", "4.1.8"
 
