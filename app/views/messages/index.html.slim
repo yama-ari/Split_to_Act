@@ -1,0 +1,16 @@
+.container.mx-auto.max-w-2xl.mt-10
+  h1.text-2xl.font-bold.mb-4 タスク分解アドバイザー
+
+  = form_with model: @message, local: true do |f|
+    .mb-4
+      = f.label :content, "やりたいこと・目標・悩みなどを入力してください", class: "block font-semibold"
+      = f.text_area :content, rows: 3, class: "w-full border rounded p-2"
+    .mb-4
+      = f.submit "具体的なステップを提案", class: "bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+
+  .mt-8.space-y-4
+    - @messages.each do |message|
+      .border.p-4.rounded.shadow.bg-white
+        p.text-sm.text-gray-500.text-right.mb-1 = message.created_at.strftime("%m/%d %H:%M")
+        p.font-semibold.text-gray-700
+          = message.content

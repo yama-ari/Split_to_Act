@@ -61,3 +61,6 @@ gem "tailwindcss-ruby", "3.4.17"
 gem "slim-rails"
 gem "devise"
 gem "devise-i18n"
+gem "dotenv-rails"
+
+gem "ruby-openai", "~> 5.0"
