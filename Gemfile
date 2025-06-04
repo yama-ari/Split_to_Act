@@ -57,4 +57,13 @@ group :test do
 end
 
 gem "tailwindcss-rails"
+
+gem "slim-rails"
+gem "devise"
+gem "devise-i18n"
+gem "dotenv-rails"
+
+gem "ruby-openai", "~> 5.0"
+
 gem "tailwindcss-ruby", "4.1.6"
+

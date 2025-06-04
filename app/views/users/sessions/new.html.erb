@@ -1,0 +1,33 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">ログイン</h2>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="mb-4">
+        <%= f.label :email, class: "block text-gray-700 mb-1" %>
+        <%= f.email_field :email, autofocus: true, class: "w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" %>
+      </div>
+
+      <div class="mb-4">
+        <%= f.label :password, class: "block text-gray-700 mb-1" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" %>
+      </div>
+
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <%= f.check_box :remember_me, class: "mr-1" %>
+          <%= f.label :remember_me, class: "text-sm text-gray-700" %>
+        </div>
+        <%= link_to "パスワードをお忘れですか？", new_password_path(resource_name), class: "text-sm text-blue-500 hover:underline" %>
+      </div>
+
+      <div>
+        <%= f.submit "ログイン", class: "w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg" %>
+      </div>
+    <% end %>
+
+    <div class="mt-6 text-center">
+      <%= link_to "アカウントをお持ちでない方はこちら", new_registration_path(resource_name), class: "text-sm text-blue-500 hover:underline" %>
+    </div>
+  </div>
+</div>
