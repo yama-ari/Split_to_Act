@@ -63,7 +63,7 @@ gem "devise"
 gem "devise-i18n"
 gem "dotenv-rails"
 
-gem "ruby-openai", "~> 5.0"
+gem "ruby-openai", "~> 8.1"
 
 gem "tailwindcss-ruby", "4.1.6"
 
